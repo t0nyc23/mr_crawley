@@ -1,13 +1,20 @@
 # Mr. Crawley
 ---
-Simple threaded web crawler in python3
-###### Usage
-`crawley.py -h -t THREADS -a USER_AGENT -d  target_url`
-###### Options
-`target_url`             Target url to crawl
-  `-h, --help`           Show this help message and exit
-  `-t THREADS `         Number of threads to run (default=4)
-  `-a USER_AGENT`     Set a custom User-Agent string
-  `-d`                            Show debug messages (default=false)
-###### Example
-`python3 crawley.py http://example.com -t 6 -a "Mozilla/5.0" | tee crawley.out`
+Simple threaded static web crawler in python3
+
+### Options
+```
+usage: crawley.py [-h] -u TARGET_URL [-t THREADS] [-a USER_AGENT] [-d]
+                  [-s SLEEP]
+
+options:
+  -h, --help            show this help message and exit
+  -u TARGET_URL         target base url to crawl (e.g. -u
+                        https://example.com/)
+  -t THREADS            number of threads to run (default=4) (e.g. -t 23)
+  -a USER_AGENT         set a custom User-Agent string (e.g. -a 'MyUA/0.1')
+  -d                    enable debug messages (default=false)
+  -s SLEEP, --sleep SLEEP
+                        milliseconds to sleep before a request (e.g. -s 200)
+                        (default is 600)
+```
