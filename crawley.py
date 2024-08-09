@@ -216,7 +216,7 @@ if __name__ == "__main__":
 		print(colored("[+] A target url is required ( e.g. ./crawley.py -u http://example.com )", "red"))
 		print(colored("[+] Run \"python3 crawley.py --help\" to get help", "red"))
 	else:
-		debug_messages = argparse.debug_messages
+		debug_messages = arguments.debug_messages
 		options = vars(arguments)
 		crawley = Crawley(options)
 		printdbg("[+] Starting Crawley.run()")
